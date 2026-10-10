@@ -205,7 +205,7 @@ export default function Portfolio() {
 
         <section id="contact" className="bg-[#272c37] py-12 text-[#f1ecdf] md:py-16">
           <div className="page-wrap flex flex-col justify-between gap-7 md:flex-row md:items-center">
-            <div><p className="mono mb-3 text-[11px] uppercase tracking-[.14em] text-[#c5d37c]">Contact</p><h2 className="display text-3xl font-bold md:text-[42px]">Let’s build something useful.</h2><p className="mt-3 text-[15px] text-[#c6c7c7]">The strongest evidence is in the details. Start a conversation.</p></div>
+            <div><p className="mono mb-3 text-[11px] uppercase tracking-[.14em] text-[#c5d37c]">Contact</p><h2 className="display text-3xl font-bold md:text-[42px]">Let’s connect!</h2><p className="mt-3 text-[15px] text-[#c6c7c7]">The strongest evidence is in the details. Start a conversation.</p></div>
             <div className="flex flex-wrap gap-3">
               <a href={LINKEDIN} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#c5d37c] px-5 py-3 text-[14px] font-bold text-[#272c37] transition hover:bg-[#d5df9e]" aria-label="Connect with Yan on LinkedIn" data-testid="link-linkedin-footer"><Linkedin size={15} aria-hidden="true" /> LinkedIn <ArrowUpRight size={13} aria-hidden="true" /></a>
               <a href={GITHUB} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border border-[#616775] px-5 py-3 text-[14px] font-semibold transition hover:border-[#f1ecdf]" aria-label="View Yan Zhang’s GitHub profile" data-testid="link-github"><Github size={15} aria-hidden="true" /> GitHub <ArrowUpRight size={13} aria-hidden="true" /></a>
