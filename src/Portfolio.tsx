@@ -59,9 +59,9 @@ export default function Portfolio() {
             <span className="text-[15px] font-bold tracking-tight">Yan Zhang <span className="hidden font-normal text-muted-foreground sm:inline">/ Software Engineer</span></span>
           </a>
           <nav aria-label="Main navigation" className="mobile-nav flex items-center gap-6 text-[14px]">
-            <a className="nav-link" href="#work" data-testid="link-nav-work">Projects</a>
-            <a className="nav-link" href="#experience" data-testid="link-nav-experience">Experience</a>
             <a className="nav-link" href="#education" data-testid="link-nav-education">Education</a>
+            <a className="nav-link" href="#experience" data-testid="link-nav-experience">Experience</a>
+            <a className="nav-link" href="#work" data-testid="link-nav-work">Projects</a>
             <a className="nav-link" href="#contact" data-testid="link-nav-contact">Contact</a>
           </nav>
         </div>
@@ -133,16 +133,19 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section id="work" className="page-wrap section-rule py-16 md:py-[84px]" aria-labelledby="work-title">
-          <div className="mb-9 flex flex-wrap items-end justify-between gap-4">
+        <section id="education" className="page-wrap section-rule py-16 md:py-[78px]" aria-labelledby="education-title">
+          <div className="grid gap-9 md:grid-cols-[.7fr_1.3fr]">
+            <div><p className="eyebrow mb-3">Foundations</p><h2 id="education-title" className="display text-4xl font-bold md:text-[48px]">Education</h2></div>
             <div>
-              <p className="eyebrow mb-3">Selected projects</p>
-              <h2 id="work-title" className="display text-4xl font-bold md:text-[52px]">Projects.</h2>
+              <article className="education-row grid gap-2 border-t border-[#c9c1b4] py-5" data-testid="education-vanderbilt">
+                <span className="mono text-[12px] text-muted-foreground">AUG 2024 — MAY 2026</span>
+                <div className="education-content"><div className="min-w-0"><h3 className="text-base font-bold"><a className="inline-flex items-center gap-2 underline decoration-[#c9c1b4] underline-offset-4 hover:text-[#71303b]" href="https://www.vanderbilt.edu/" target="_blank" rel="noreferrer">Vanderbilt University<ArrowUpRight size={14} aria-hidden="true" /><span className="sr-only"> official website (opens in a new tab)</span></a></h3><p className="mt-1 text-[15px] text-muted-foreground">Master of Computer Science</p><p className="mt-2 mono text-[14px] text-[#71303b]">GPA 3.84 / 4.00</p></div><img className="school-logo" src="/schools/vanderbilt.svg" alt="Vanderbilt University official logo" width="180" height="48" loading="lazy" /></div>
+              </article>
+              <article className="education-row grid gap-2 border-t border-[#c9c1b4] py-5" data-testid="education-hkbu">
+                <span className="mono text-[12px] text-muted-foreground">SEP 2020 — JUN 2024</span>
+                <div className="education-content"><div className="min-w-0"><h3 className="text-base font-bold"><a className="inline-flex items-center gap-2 underline decoration-[#c9c1b4] underline-offset-4 hover:text-[#71303b]" href="https://www.hkbu.edu.hk/" target="_blank" rel="noreferrer">Hong Kong Baptist University<ArrowUpRight size={14} aria-hidden="true" /><span className="sr-only"> official website (opens in a new tab)</span></a></h3><p className="mt-1 text-[15px] text-muted-foreground">BSc (Honors) Computer Science · Minor in Applied Psychology</p><p className="mt-2 mono text-[14px] text-[#71303b]">GPA 3.51 / 4.00</p></div><img className="school-logo" src="/schools/hkbu.svg" alt="Hong Kong Baptist University official logo" width="150" height="40" loading="lazy" /></div>
+              </article>
             </div>
-            <p className="max-w-[295px] text-[15px] leading-6 text-muted-foreground">A quick look at what I’ve built. Open a project to explore my contribution, tools, and outcome.</p>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2 items-start">
-            {projects.filter(project => !['project-bozhon', 'project-changeplusplus'].includes(project.id)).map(project => <ExpandableProject key={project.id} project={project} />)}
           </div>
         </section>
 
@@ -171,19 +174,16 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section id="education" className="page-wrap section-rule py-16 md:py-[78px]" aria-labelledby="education-title">
-          <div className="grid gap-9 md:grid-cols-[.7fr_1.3fr]">
-            <div><p className="eyebrow mb-3">Foundations</p><h2 id="education-title" className="display text-4xl font-bold md:text-[48px]">Education</h2></div>
+        <section id="work" className="page-wrap section-rule py-16 md:py-[84px]" aria-labelledby="work-title">
+          <div className="mb-9 flex flex-wrap items-end justify-between gap-4">
             <div>
-              <article className="education-row grid gap-2 border-t border-[#c9c1b4] py-5" data-testid="education-vanderbilt">
-                <span className="mono text-[12px] text-muted-foreground">AUG 2024 — MAY 2026</span>
-                <div className="education-content"><div className="min-w-0"><h3 className="text-base font-bold"><a className="inline-flex items-center gap-2 underline decoration-[#c9c1b4] underline-offset-4 hover:text-[#71303b]" href="https://www.vanderbilt.edu/" target="_blank" rel="noreferrer">Vanderbilt University<ArrowUpRight size={14} aria-hidden="true" /><span className="sr-only"> official website (opens in a new tab)</span></a></h3><p className="mt-1 text-[15px] text-muted-foreground">Master of Computer Science</p><p className="mt-2 mono text-[14px] text-[#71303b]">GPA 3.84 / 4.00</p></div><img className="school-logo" src="/schools/vanderbilt.svg" alt="Vanderbilt University official logo" width="180" height="48" loading="lazy" /></div>
-              </article>
-              <article className="education-row grid gap-2 border-t border-[#c9c1b4] py-5" data-testid="education-hkbu">
-                <span className="mono text-[12px] text-muted-foreground">SEP 2020 — JUN 2024</span>
-                <div className="education-content"><div className="min-w-0"><h3 className="text-base font-bold"><a className="inline-flex items-center gap-2 underline decoration-[#c9c1b4] underline-offset-4 hover:text-[#71303b]" href="https://www.hkbu.edu.hk/" target="_blank" rel="noreferrer">Hong Kong Baptist University<ArrowUpRight size={14} aria-hidden="true" /><span className="sr-only"> official website (opens in a new tab)</span></a></h3><p className="mt-1 text-[15px] text-muted-foreground">BSc (Honors) Computer Science · Minor in Applied Psychology</p><p className="mt-2 mono text-[14px] text-[#71303b]">GPA 3.51 / 4.00</p></div><img className="school-logo" src="/schools/hkbu.svg" alt="Hong Kong Baptist University official logo" width="150" height="40" loading="lazy" /></div>
-              </article>
+              <p className="eyebrow mb-3">Selected projects</p>
+              <h2 id="work-title" className="display text-4xl font-bold md:text-[52px]">Projects.</h2>
             </div>
+            <p className="max-w-[295px] text-[15px] leading-6 text-muted-foreground">A quick look at what I’ve built. Open a project to explore my contribution, tools, and outcome.</p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 items-start">
+            {projects.filter(project => !['project-bozhon', 'project-changeplusplus'].includes(project.id)).map(project => <ExpandableProject key={project.id} project={project} />)}
           </div>
         </section>
 
@@ -205,7 +205,7 @@ export default function Portfolio() {
 
         <section id="contact" className="bg-[#272c37] py-12 text-[#f1ecdf] md:py-16">
           <div className="page-wrap flex flex-col justify-between gap-7 md:flex-row md:items-center">
-            <div><p className="mono mb-3 text-[11px] uppercase tracking-[.14em] text-[#c5d37c]">Contact</p><h2 className="display text-3xl font-bold md:text-[42px]">Let’s connect!</h2><p className="mt-3 text-[15px] text-[#c6c7c7]">The strongest evidence is in the details. Start a conversation.</p></div>
+            <div><p className="mono mb-3 text-[11px] uppercase tracking-[.14em] text-[#c5d37c]">Contact</p><h2 className="display text-3xl font-bold md:text-[42px]">Let’s connect!</h2></div>
             <div className="flex flex-wrap gap-3">
               <a href={LINKEDIN} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#c5d37c] px-5 py-3 text-[14px] font-bold text-[#272c37] transition hover:bg-[#d5df9e]" aria-label="Connect with Yan on LinkedIn" data-testid="link-linkedin-footer"><Linkedin size={15} aria-hidden="true" /> LinkedIn <ArrowUpRight size={13} aria-hidden="true" /></a>
               <a href={GITHUB} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border border-[#616775] px-5 py-3 text-[14px] font-semibold transition hover:border-[#f1ecdf]" aria-label="View Yan Zhang’s GitHub profile" data-testid="link-github"><Github size={15} aria-hidden="true" /> GitHub <ArrowUpRight size={13} aria-hidden="true" /></a>
