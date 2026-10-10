@@ -1,0 +1,254 @@
+{
+  "name": "Yan Zhang",
+  "role": "Backend Software Engineer — Early Career",
+  "positioning": "I build reliable backend systems, full-stack applications, and practical AI workflows. My work spans manufacturing traceability, secure email services, healthcare automation, and tools for social impact.",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/yanzhang02",
+    "github": "https://github.com/kkyan1105"
+  },
+  "capabilities": [
+    {
+      "id": "reliable-backend",
+      "title": "Reliable backend systems",
+      "description": "Builds data-integrity safeguards, request deduplication, and operational monitoring for real-world workflows.",
+      "evidence": "At Bozhon Precision, Spring Boot request deduplication distinguished device retries from legitimate rework. Persisted duplicate records in the affected workflow decreased from 8–12% to nearly zero during the monitored period; storage safeguards supported 3,000+ scan events per minute at peak throughput."
+    },
+    {
+      "id": "privacy-conscious-ai",
+      "title": "Practical AI with privacy boundaries",
+      "description": "Applies AI to knowledge workflows with consent controls, limited data retention, and measured retrieval quality.",
+      "evidence": "At ChangePlusPlus, a nonprofit engineering team built a consent-controlled coaching knowledge platform. The extraction pipeline reduced manual curation from about 60 to about 10 minutes per session; top-3 retrieval relevance rose from about 65% to about 88% on coach-labeled test queries."
+    },
+    {
+      "id": "async-integration",
+      "title": "Asynchronous processing and integration",
+      "description": "Connects APIs and external data formats through asynchronous processing, duplicate checks, and normalized schemas.",
+      "evidence": "Healthcare Care Plan Automation used asynchronous task processing to avoid server timeouts and support concurrent order submission, with layered duplicate detection and JSON/XML adapters."
+    }
+  ],
+  "experience": [
+    {
+      "id": "experience-bozhon",
+      "organization": "Bozhon Precision Industry Technology",
+      "title": "Software Engineer Intern",
+      "dates": "May 2025 – August 2025",
+      "location": "Suzhou, China",
+      "bullets": [
+        "Developed application-side backend services for a manufacturing-line traceability system as part of the backend engineering team.",
+        "Designed a Spring Boot REST API request-deduplication service to distinguish device retry scans from legitimate rework passes, reducing persisted duplicates in the affected workflow from 8–12% to nearly zero during the monitored period.",
+        "Added MySQL storage-layer integrity fallbacks, graceful constraint handling, automatic retry, and conflict resolution; the service sustained 3,000+ scan events per minute at peak throughput.",
+        "Configured Prometheus metrics, Grafana dashboards, and AlertManager thresholds, with Docker and Kubernetes deployment and CI/CD rollout; defect detection shifted from weekly discovery to real-time alerts with sub-minute latency."
+      ]
+    },
+    {
+      "id": "experience-changeplusplus",
+      "organization": "ChangePlusPlus",
+      "title": "Software Developer",
+      "dates": "October 2024 – May 2025",
+      "location": "Nashville, TN",
+      "bullets": [
+        "Contributed on a nonprofit engineering team to a privacy-preserving AI knowledge platform for Pennsylvania Women Work, helping career coaches turn consented session recordings into structured training resources.",
+        "Built a clip-level audio consent system with Node.js, AWS Lambda, S3-backed storage, least-privilege access, and time-bound presigned URLs; consent decisions were stored in PostgreSQL across 1,500+ annual participants.",
+        "Designed a Whisper and GPT-4o knowledge pipeline that reduced manual curation from about 60 to about 10 minutes per session, with raw transcript retention limited to 24 hours after extraction.",
+        "Implemented a LangChain retrieval-augmented generation pipeline that improved top-3 relevance from about 65% to about 88% on coach-labeled test queries."
+      ]
+    },
+    {
+      "id": "experience-new-oriental",
+      "organization": "New Oriental",
+      "title": "Full-stack Software Engineer",
+      "dates": "2024",
+      "bullets": [
+        "Developed and maintained the website used for enrollment in in-person courses."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-bozhon",
+      "name": "Manufacturing Traceability",
+      "context": "Bozhon Precision internship case study",
+      "dates": "May 2025 – August 2025",
+      "problem": "Device retries could be confused with legitimate rework passes, creating duplicate traceability scans.",
+      "contribution": "Built a Spring Boot REST request-deduplication service, MySQL integrity safeguards with retry and conflict-resolution logic, and observability with Prometheus, Grafana, and AlertManager.",
+      "outcome": "Persisted duplicate records in the affected workflow decreased from 8–12% to nearly zero during the monitored period. The service sustained 3,000+ scan events per minute at peak throughput; defect detection moved from weekly discovery to real-time alerts with sub-minute latency.",
+      "tools": [
+        "Spring Boot",
+        "MySQL",
+        "Prometheus",
+        "Grafana",
+        "AlertManager",
+        "Docker",
+        "Kubernetes",
+        "CI/CD"
+      ],
+      "contributionLabel": "My contribution",
+      "publicLink": ""
+    },
+    {
+      "id": "project-changeplusplus",
+      "name": "AI Knowledge-Management Platform",
+      "context": "ChangePlusPlus nonprofit team project for Pennsylvania Women Work",
+      "dates": "October 2024 – May 2025",
+      "problem": "Career coaches needed to turn consented coaching-session recordings into reusable, searchable training resources while limiting exposure of sensitive source material.",
+      "contribution": "Built clip-level consent and controlled audio access, contributed to an AI-assisted extraction pipeline, and implemented a LangChain retrieval pipeline with metadata filtering, similarity thresholds, and prompt grounding.",
+      "outcome": "Manual curation time decreased from about 60 to about 10 minutes per session. Top-3 retrieval relevance improved from about 65% to about 88% on coach-labeled test queries. Raw transcript retention was limited to 24 hours after extraction.",
+      "tools": [
+        "Node.js",
+        "AWS Lambda",
+        "Amazon S3",
+        "PostgreSQL",
+        "Whisper",
+        "GPT-4o",
+        "LangChain"
+      ],
+      "contributionLabel": "My contribution",
+      "publicLink": ""
+    },
+    {
+      "id": "project-gomail",
+      "name": "Gomail",
+      "context": "Self-hosted email server",
+      "dates": "",
+      "problem": "A self-hosted email service needs reliable protocol handling, secure data storage, and efficient concurrent connections.",
+      "contribution": "Built an email server from scratch in Go implementing SMTP and IMAP. Added AES-256-GCM encryption for SQLite fields with PBKDF2-derived per-email keys, TLS 1.3/X25519 transport security, and JWT issuance after password and TOTP verification. Used goroutines for concurrent connection handling and Redis caching for hot-path data.",
+      "outcome": "Under benchmark load, the server achieved 1,372 connections/second with 1.5 ms average latency. API load testing sustained 1,234 requests/second at a 100% success rate.",
+      "tools": [
+        "Go",
+        "React",
+        "Redis",
+        "SQLite",
+        "SMTP",
+        "IMAP",
+        "AES-256-GCM",
+        "TLS 1.3",
+        "JWT",
+        "TOTP"
+      ],
+      "contributionLabel": "My contribution",
+      "publicLink": ""
+    },
+    {
+      "id": "project-cairn",
+      "name": "Cairn — Self-Evolving Agentic Harness",
+      "context": "Software project",
+      "dates": "May 2026 – August 2026",
+      "problem": "An agent should learn from user feedback and carry reusable lessons into future tasks, rather than repeat the same mistakes.",
+      "contribution": "Designed a self-evolving skill pipeline that extracts reusable rules from user feedback, decides whether to add, merge, or discard them, and persists the results as SKILL.md files. Built the supporting Python execution harness and three-tier memory folding for long-running tasks.",
+      "outcome": "Feedback becomes persistent, reusable skills. Provenance, version snapshots, and usage statistics keep skill evolution auditable; context folding supports task resumption.",
+      "tools": [
+        "Python",
+        "AsyncIO",
+        "OpenAI-compatible APIs",
+        "Anthropic SDK",
+        "MCP",
+        "Docker",
+        "JSON-RPC",
+        "Skills"
+      ],
+      "contributionLabel": "My contribution",
+      "publicLink": ""
+    },
+    {
+      "id": "project-care-plan",
+      "name": "Healthcare Care Plan Automation System",
+      "context": "Software project",
+      "dates": "January 2026 – March 2026",
+      "problem": "Synchronous LLM requests risked server timeouts and could not support concurrent order submission reliably.",
+      "contribution": "Designed asynchronous task processing (Celery and Redis to AWS SQS and Lambda), a Django REST API with patient/provider/order duplicate detection, and adapters that normalize JSON/XML orders into an InternalOrder schema.",
+      "outcome": "The architecture was designed to prevent server timeouts and support concurrent order submission.",
+      "tools": [
+        "Python",
+        "Django REST Framework",
+        "React",
+        "PostgreSQL",
+        "Celery",
+        "Redis",
+        "AWS SQS",
+        "AWS Lambda",
+        "Docker",
+        "Terraform"
+      ],
+      "contributionLabel": "My contribution",
+      "publicLink": ""
+    },
+    {
+      "id": "project-outreach",
+      "name": "Outreach",
+      "context": "Social-impact hackathon · team project",
+      "dates": "",
+      "problem": "An AI-assisted app helps nearby seniors join shared outings with volunteer drivers, combining transportation with social connection.",
+      "contribution": "Built by a two-person team. The app combines senior outing requests, AI group matching, a volunteer dashboard, multi-stop route planning, interactive maps, and voice-guided booking. Its stack includes Expo/React Native, an Express/TypeScript API, Supabase, GPT-4o structured output, Google Maps, and Whisper.",
+      "contributionLabel": "Team implementation",
+      "outcome": "Grand Prize winner at the Vanderbilt University Global Good Hackathon, as documented in the project README.",
+      "tools": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Express.js",
+        "Supabase",
+        "PostgreSQL",
+        "GPT-4o",
+        "Google Maps",
+        "Whisper"
+      ],
+      "publicLink": "https://github.com/kkyan1105/Outreach"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Vanderbilt University",
+      "degree": "Master of Computer Science",
+      "dates": "August 2024 – May 2026",
+      "detail": "GPA: 3.84/4.00"
+    },
+    {
+      "institution": "Hong Kong Baptist University",
+      "degree": "BSc (Honors) in Computer Science",
+      "dates": "September 2020 – June 2024",
+      "detail": "GPA: 3.51/4.00; Minor in Applied Psychology"
+    }
+  ],
+  "skills": {
+    "Languages": [
+      "Python",
+      "Java",
+      "C/C++",
+      "JavaScript",
+      "SQL",
+      "TypeScript",
+      "Go",
+      "HTML/CSS"
+    ],
+    "Frameworks": [
+      "Spring Boot",
+      "Django",
+      "ASP.NET",
+      "React",
+      "Node.js",
+      "Next.js",
+      "MUI",
+      "Tailwind CSS",
+      "jQuery"
+    ],
+    "Tools": [
+      "Git",
+      "Docker",
+      "Redux",
+      "AWS S3",
+      "AWS Lambda",
+      "AWS EC2",
+      "Redis",
+      "Message Queue",
+      "Nginx",
+      "CI/CD",
+      "OAuth2",
+      "JWT"
+    ],
+    "Databases": [
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB"
+    ]
+  }
+}
