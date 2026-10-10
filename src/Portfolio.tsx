@@ -16,9 +16,13 @@ function ExpandableProject({project, caseStudy = false}: {project: typeof projec
       <summary className={caseStudy ? 'case-summary' : 'project-summary'}>
         <div className="min-w-0 flex-1">
           <p className="project-number mb-2 text-[11px]">{caseStudy ? 'WORK CASE STUDY' : 'PROJECT'}</p>
-          <h3 className={caseStudy ? 'text-[15px] font-bold' : 'display text-[24px] font-bold leading-tight'}>{project.name}</h3>
+          <div className="flex items-start gap-2">
+            <h3 className={caseStudy ? 'text-[15px] font-bold' : 'display text-[24px] font-bold leading-tight'}>{project.name}</h3>
+            {project.publicLink && <a href={project.publicLink} target="_blank" rel="noreferrer" onClick={event => event.stopPropagation()} className="project-github-link shrink-0" aria-label={`Open ${project.name} on GitHub (opens in a new tab)`} title="View on GitHub" data-testid={`github-${project.id}`}><img src="/github-mark.svg" width="22" height="22" alt="" aria-hidden="true" /></a>}
+          </div>
           {!caseStudy && <p className="mt-2 text-[14px] font-semibold text-[#71303b]">{project.organization}</p>}
           <p className="mt-3 text-[15px] leading-6 text-muted-foreground">{project.intro}</p>
+          <div className="mt-5 flex flex-wrap gap-2">{project.tags.map(tag=><span className="project-tag" key={tag}>{tag}</span>)}</div>
           <span className="mt-3 inline-block text-[12px] font-semibold text-[#71303b]"><span className="disclosure-closed">View details</span><span className="disclosure-open">Hide details</span></span>
         </div><ChevronDown className="disclosure-chevron mt-1 shrink-0" size={18} aria-hidden="true" />
       </summary>
@@ -27,8 +31,6 @@ function ExpandableProject({project, caseStudy = false}: {project: typeof projec
           <li><span className="font-bold">{project.contributionLabel}. </span>{project.contribution}</li>
           <li><span className="font-bold">Outcome. </span>{project.outcome}</li>
         </ul>
-        {project.publicLink && <a href={project.publicLink} target="_blank" rel="noreferrer" className="mt-4 inline-flex min-h-11 items-center gap-2 text-[15px] font-semibold text-[#71303b] underline underline-offset-4">View project on GitHub <ArrowUpRight size={14} aria-hidden="true" /></a>}
-        <div className="mt-5 flex flex-wrap gap-2">{project.tags.map(tag=><span className="project-tag" key={tag}>{tag}</span>)}</div>
       </div>
     </details>
   </article>;
@@ -71,11 +73,11 @@ export default function Portfolio() {
           <div className="relative z-[2] min-w-0 fade-in">
             <p className="eyebrow mb-6 flex items-center gap-2"><span className="inline-block h-2 w-2 rounded-full bg-[#6a927c]" /> Software engineer · Backend · Full-stack · Applied AI</p>
             <h1 id="hero-title" className="display max-w-[750px] text-[clamp(40px,5.3vw,68px)] font-extrabold leading-[.97]">
-              Build with care.<br /><span className="text-[#71303b]">Make it useful.</span>
+              Build it reliable.<br /><span className="text-[#71303b]">Make it useful.</span>
             </h1>
             <img className="mobile-portrait" src="/photos/graduation-portrait.webp" alt="Yan Zhang in a graduation gown" width="100" height="133" />
             <p className="mt-7 max-w-[580px] text-[17px] leading-[1.75] text-[#525968] md:text-[19px]">
-              I’m Yan Zhang. I build reliable backend systems, full-stack applications, and practical AI tools—from manufacturing traceability and secure email to healthcare and social impact.
+              I’m Yan Zhang. I build reliable backend systems, full-stack applications, and practical AI tools—from manufacturing traceability and AI agents to healthcare and social impact.
             </p>
             <div className="mt-7 flex flex-wrap gap-x-5 gap-y-3 text-[15px] font-semibold">
               <a className="hero-action inline-flex items-center gap-2 bg-[#71303b] px-5 py-3 text-[#f7f3e9] transition hover:bg-[#57232d]" href={LINKEDIN} target="_blank" rel="noreferrer" aria-label="Connect with Yan Zhang on LinkedIn" data-testid="link-linkedin-hero">
@@ -175,7 +177,7 @@ export default function Portfolio() {
             <div>
               <article className="grid gap-2 border-t border-[#c9c1b4] py-5 sm:grid-cols-[150px_1fr]" data-testid="education-vanderbilt">
                 <span className="mono text-[12px] text-muted-foreground">AUG 2024 — MAY 2026</span>
-                <div><img className="school-logo mb-3" src="/schools/vanderbilt.svg" alt="Vanderbilt University official logo" width="150" height="40" loading="lazy" /><h3 className="text-base font-bold"><a className="inline-flex items-center gap-2 underline decoration-[#c9c1b4] underline-offset-4 hover:text-[#71303b]" href="https://www.vanderbilt.edu/" target="_blank" rel="noreferrer">Vanderbilt University<ArrowUpRight size={14} aria-hidden="true" /><span className="sr-only"> official website (opens in a new tab)</span></a></h3><p className="mt-1 text-[15px] text-muted-foreground">Master of Computer Science</p><p className="mt-2 mono text-[14px] text-[#71303b]">GPA 3.84 / 4.00</p></div>
+                <div><img className="school-logo mb-3" src="/schools/vanderbilt.svg" alt="Vanderbilt University official logo" width="180" height="48" loading="lazy" /><h3 className="text-base font-bold"><a className="inline-flex items-center gap-2 underline decoration-[#c9c1b4] underline-offset-4 hover:text-[#71303b]" href="https://www.vanderbilt.edu/" target="_blank" rel="noreferrer">Vanderbilt University<ArrowUpRight size={14} aria-hidden="true" /><span className="sr-only"> official website (opens in a new tab)</span></a></h3><p className="mt-1 text-[15px] text-muted-foreground">Master of Computer Science</p><p className="mt-2 mono text-[14px] text-[#71303b]">GPA 3.84 / 4.00</p></div>
               </article>
               <article className="grid gap-2 border-t border-[#c9c1b4] py-5 sm:grid-cols-[150px_1fr]" data-testid="education-hkbu">
                 <span className="mono text-[12px] text-muted-foreground">SEP 2020 — JUN 2024</span>
