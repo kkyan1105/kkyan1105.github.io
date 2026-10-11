@@ -78,7 +78,7 @@ export default function Portfolio() {
             </h1>
             <img className="mobile-portrait" src="/photos/graduation-portrait.webp" alt="Yan Zhang in a graduation gown" width="100" height="133" />
             <p className="mt-7 max-w-[580px] text-[17px] leading-[1.75] text-[#525968] md:text-[19px]">
-              I’m Yan Zhang. I build reliable backend systems, full-stack applications, and practical AI tools—from manufacturing traceability and AI agents to healthcare and social impact.
+              I’m Yan Zhang. I build reliable backend systems, full-stack applications, and AI-powered tools, with work spanning manufacturing traceability, LLM agents, healthcare automation, and nonprofit tech.
             </p>
             <div className="mt-7 flex flex-wrap gap-x-5 gap-y-3 text-[15px] font-semibold">
               <a className="hero-action inline-flex items-center gap-2 bg-[#71303b] px-5 py-3 text-[#f7f3e9] transition hover:bg-[#57232d]" href={LINKEDIN} target="_blank" rel="noreferrer" aria-label="Connect with Yan Zhang on LinkedIn" data-testid="link-linkedin-hero">
