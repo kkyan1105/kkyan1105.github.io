@@ -222,11 +222,12 @@ export default function Portfolio() {
         </section>
 
         <section id="contact" className="bg-[#272c37] py-12 text-[#f1ecdf] md:py-16">
-          <div className="page-wrap flex flex-col justify-between gap-7 md:flex-row md:items-center">
-            <div><p className="mono mb-3 text-[11px] uppercase tracking-[.14em] text-[#c5d37c]">Contact</p><h2 className="display text-3xl font-bold md:text-[42px]">Let’s connect!</h2></div>
-            <div className="flex flex-wrap gap-3">
-              <a href={LINKEDIN} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#c5d37c] px-5 py-3 text-[14px] font-bold text-[#272c37] transition hover:bg-[#d5df9e]" aria-label="Connect with Yan on LinkedIn" data-testid="link-linkedin-footer"><Linkedin size={15} aria-hidden="true" /> LinkedIn <ArrowUpRight size={13} aria-hidden="true" /></a>
-              <a href={GITHUB} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border border-[#616775] px-5 py-3 text-[14px] font-semibold transition hover:border-[#f1ecdf]" aria-label="View Yan Zhang’s GitHub profile" data-testid="link-github"><Github size={15} aria-hidden="true" /> GitHub <ArrowUpRight size={13} aria-hidden="true" /></a>
+          <div className="page-wrap">
+            <p className="mono mb-3 text-[11px] uppercase tracking-[.14em] text-[#c5d37c]">Contact</p>
+            <h2 className="display text-3xl font-bold md:text-[42px]">Let’s connect!</h2>
+            <div className="mt-4 flex items-center gap-3">
+              <a href={LINKEDIN} target="_blank" rel="noreferrer" className="inline-flex h-9 w-9 items-center justify-center rounded transition hover:text-[#c5d37c] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" aria-label="Connect with Yan on LinkedIn" title="LinkedIn" data-testid="link-linkedin-footer"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96C2 21.32 2.69 22 3.55 22h16.9c.86 0 1.55-.68 1.55-1.52V3.52C22 2.68 21.31 2 20.45 2ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.36-1.52 2.8-1.52 3 0 3.57 1.98 3.57 4.56v5.21Z"/></svg></a>
+              <a href={GITHUB} target="_blank" rel="noreferrer" className="inline-flex h-9 w-9 items-center justify-center rounded transition hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" aria-label="View Yan Zhang’s GitHub profile" title="GitHub" data-testid="link-github"><img src="/github-mark.svg" width="22" height="22" className="invert" alt="" aria-hidden="true" /></a>
             </div>
           </div>
         </section>
