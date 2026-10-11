@@ -28,6 +28,16 @@
   ],
   "experience": [
     {
+      "id": "experience-teaching",
+      "organization": "Vanderbilt University School of Engineering",
+      "title": "Teaching Assistant",
+      "dates": "August 2025 – December 2025",
+      "location": "Nashville, Tennessee, United States",
+      "bullets": [
+        "CS 4376 · Foundation of Human Computer Interaction"
+      ]
+    },
+    {
       "id": "experience-bozhon",
       "organization": "Bozhon Precision Industry Technology",
       "title": "Software Engineer Intern",
@@ -57,7 +67,7 @@
       "id": "experience-new-oriental",
       "organization": "New Oriental",
       "title": "Full-stack Software Engineer",
-      "dates": "2024",
+      "dates": "May 2024 – August 2024",
       "bullets": [
         "Developed and maintained the website used for enrollment in in-person courses."
       ]
@@ -250,5 +260,21 @@
       "PostgreSQL",
       "MongoDB"
     ]
-  }
+  },
+  "publications": [
+    {
+      "title": "The House of the Impossible Gables: Player Engagement and Spatial Perception of Physically Impossible Spaces in Social VR",
+      "authors": [
+        "Jingfei Huang",
+        "Yan Zhang",
+        "Jingyi Ge",
+        "Yaning Li",
+        "Ray LC"
+      ],
+      "venue": "HCII 2025",
+      "year": 2025,
+      "url": "https://link.springer.com/chapter/10.1007/978-3-031-92826-0_10",
+      "summary": "Explores how physically impossible spaces in VRChat shape player perception and interaction. Qualitative analysis of exploration patterns and interviews offers insights into spatial affordances and the design of immersive game and exhibition environments."
+    }
+  ]
 }
