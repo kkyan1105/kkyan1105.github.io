@@ -120,7 +120,7 @@ export default function Portfolio() {
 
         <section id="capabilities" className="page-wrap pb-12" aria-labelledby="role-match-title">
           <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
-            <div><p className="eyebrow mb-2">Role match</p><h2 id="role-match-title" className="display text-2xl font-bold md:text-3xl">Three capabilities. Specific evidence.</h2></div>
+            <div><p className="eyebrow mb-2">Role match</p><h2 id="role-match-title" className="display text-2xl font-bold md:text-3xl">Engineering highlights</h2></div>
             <a href="#work" className="text-[14px] font-semibold text-[#71303b] underline underline-offset-4">Explore the projects ↗</a>
           </div>
           <div className="grid gap-3 md:grid-cols-3">
@@ -192,19 +192,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section id="research" className="page-wrap section-rule py-16 md:py-[78px]" aria-labelledby="research-title">
-          <div className="grid gap-9 md:grid-cols-[.7fr_1.3fr]">
-            <div><p className="eyebrow mb-3">Publication</p><h2 id="research-title" className="display text-4xl font-bold md:text-[48px]">Research</h2></div>
-            <article className="border-t border-[#c9c1b4] pt-5" data-testid="publication-impossible-gables">
-              <p className="mono text-[12px] text-[#71303b]">HCII 2025 · CONFERENCE PAPER</p>
-              <h3 className="mt-3 text-[22px] font-bold leading-snug">The House of the Impossible Gables: Player Engagement and Spatial Perception of Physically Impossible Spaces in Social VR</h3>
-              <p className="mt-3 text-[15px] leading-6 text-muted-foreground">Jingfei Huang, <strong className="text-foreground">Yan Zhang</strong>, Jingyi Ge, Yaning Li &amp; Ray LC</p>
-              <p className="mt-4 text-[15px] leading-6 text-muted-foreground">Explores how physically impossible spaces in VRChat shape player perception and interaction. Qualitative analysis of exploration patterns and interviews offers insights into spatial affordances and the design of immersive game and exhibition environments.</p>
-              <a className="mt-5 inline-flex items-center gap-2 font-semibold text-[15px] text-[#71303b] underline underline-offset-4" href="https://link.springer.com/chapter/10.1007/978-3-031-92826-0_10" target="_blank" rel="noreferrer" data-testid="link-publication">View publication<ArrowUpRight size={16} aria-hidden="true" /><span className="sr-only"> on Springer (opens in a new tab)</span></a>
-            </article>
-          </div>
-        </section>
-
         <section id="skills" className="section-rule bg-[#e9e5da]/75 py-16 md:py-[78px]" aria-labelledby="skills-title">
           <div className="page-wrap grid gap-9 md:grid-cols-[.7fr_1.3fr]">
             <div><h2 id="skills-title" className="display text-4xl font-bold md:text-[48px]">Tech Stack</h2></div>
@@ -218,6 +205,19 @@ export default function Portfolio() {
                 <span className="mono text-[12px] uppercase tracking-[.08em] text-[#71303b]">{label}</span><p className="text-[15px] leading-6 text-[#444b58]">{list}</p>
               </div>)}
             </div>
+          </div>
+        </section>
+
+        <section id="research" className="page-wrap section-rule py-16 md:py-[78px]" aria-labelledby="research-title">
+          <div className="grid gap-9 md:grid-cols-[.7fr_1.3fr]">
+            <div><p className="eyebrow mb-3">Publication</p><h2 id="research-title" className="display text-4xl font-bold md:text-[48px]">Research</h2></div>
+            <article className="border-t border-[#c9c1b4] pt-5" data-testid="publication-impossible-gables">
+              <p className="mono text-[12px] text-[#71303b]">HCII 2025 · CONFERENCE PAPER</p>
+              <h3 className="mt-3 text-[22px] font-bold leading-snug">The House of the Impossible Gables: Player Engagement and Spatial Perception of Physically Impossible Spaces in Social VR</h3>
+              <p className="mt-3 text-[15px] leading-6 text-muted-foreground">Jingfei Huang, <strong className="text-foreground">Yan Zhang</strong>, Jingyi Ge, Yaning Li &amp; Ray LC</p>
+              <p className="mt-4 text-[15px] leading-6 text-muted-foreground">Explores how physically impossible spaces in VRChat shape player perception and interaction. Qualitative analysis of exploration patterns and interviews offers insights into spatial affordances and the design of immersive game and exhibition environments.</p>
+              <a className="mt-5 inline-flex items-center gap-2 font-semibold text-[15px] text-[#71303b] underline underline-offset-4" href="https://link.springer.com/chapter/10.1007/978-3-031-92826-0_10" target="_blank" rel="noreferrer" data-testid="link-publication">View publication<ArrowUpRight size={16} aria-hidden="true" /><span className="sr-only"> on Springer (opens in a new tab)</span></a>
+            </article>
           </div>
         </section>
 
