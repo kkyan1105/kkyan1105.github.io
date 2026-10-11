@@ -183,7 +183,7 @@ export default function Portfolio() {
           <div className="mb-9 flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="eyebrow mb-3">Selected projects</p>
-              <h2 id="work-title" className="display text-4xl font-bold md:text-[52px]">Projects.</h2>
+              <h2 id="work-title" className="display text-4xl font-bold md:text-[52px]">Projects</h2>
             </div>
             <p className="max-w-[295px] text-[15px] leading-6 text-muted-foreground">A quick look at what I’ve built. Open a project to explore my contribution, tools, and outcome.</p>
           </div>
