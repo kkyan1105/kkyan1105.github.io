@@ -207,7 +207,7 @@ export default function Portfolio() {
 
         <section id="skills" className="section-rule bg-[#e9e5da]/75 py-16 md:py-[78px]" aria-labelledby="skills-title">
           <div className="page-wrap grid gap-9 md:grid-cols-[.7fr_1.3fr]">
-            <div><p className="eyebrow mb-3">Resume-listed skills</p><h2 id="skills-title" className="display text-4xl font-bold md:text-[48px]">Technical range</h2></div>
+            <div><p className="eyebrow mb-3">Resume-listed skills</p><h2 id="skills-title" className="display text-4xl font-bold md:text-[48px]">Tech Stack</h2></div>
             <div className="space-y-5">
               {[
                 ['Languages', 'Python · Java · C/C++ · JavaScript · SQL · TypeScript · Go · HTML/CSS'],
