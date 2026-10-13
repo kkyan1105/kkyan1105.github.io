@@ -22,11 +22,12 @@ function ExpandableProject({project, caseStudy = false}: {project: typeof projec
           </div>
           {!caseStudy && <p className="mt-2 text-[14px] font-semibold text-[#71303b]">{project.organization}</p>}
           <p className="mt-3 text-[15px] leading-6 text-muted-foreground">{project.intro}</p>
-          <div className="mt-5 flex flex-wrap gap-2">{project.tags.map(tag=><span className="project-tag" key={tag}>{tag}</span>)}</div>
+          {!caseStudy && <div className="mt-5 flex flex-wrap gap-2">{project.tags.map(tag=><span className="project-tag" key={tag}>{tag}</span>)}</div>}
           <span className="mt-3 inline-block text-[12px] font-semibold text-[#71303b]"><span className="disclosure-closed">View details</span><span className="disclosure-open">Hide details</span></span>
         </div><ChevronDown className="disclosure-chevron mt-1 shrink-0" size={18} aria-hidden="true" />
       </summary>
       <div className={caseStudy ? 'case-body' : 'project-body'}>
+        {caseStudy && <div className="mb-5 flex flex-wrap gap-2">{project.tags.map(tag=><span className="project-tag" key={tag}>{tag}</span>)}</div>}
         <ul className="bullet-list space-y-3 text-[15px] leading-[1.75] text-[#444b58]">
           <li><span className="font-bold">{project.contributionLabel}. </span>{project.contribution}</li>
           <li><span className="font-bold">Outcome. </span>{project.outcome}</li>
